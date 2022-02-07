@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+</head>
+<body>
+    <header>
+       <h3> welcome to my blog website</h3>
+    </header>
+    <main>
+        <header>
+            <h3>blog lists</h3>
+            <ul id="blog-list">
+                <li>blog-1</li>
+                <li>blog-2</li>
+                <li>blog-3</li>
+            </ul>
+        </header>
+        <section id="blogs" class="blogs">
+            <article class="blog">
+                <h3 id="first-title">my awesome blog-1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint temporibus molestiae eum quasi tenetur laborum exercitationem consequuntur minima quas nobis aliquid necessitatibus, quidem, tempore vitae recusandae officiis, itaque aspernatur dignissimos!</p>
+            </article>
+            <article class="blog">
+                <h3 id="second-title">my awesome blog-2</h3>
+                <p>Similique ducimus nostrum vel, quod architecto ullam expedita rem sint itaque voluptates consequatur odit temporibus distinctio eligendi illum, odio dolorum optio delectus. Officiis, quaerat magnam similique at laudantium porro quas?</p>
+            </article>
+            <article class="blog">
+                <h3 id="third-title">my awesome blog-3</h3>
+                <p id="third-para">Doloremque doloribus commodi, eos velit itaque animi pariatur laborum ipsum aut soluta quaerat maxime accusantium explicabo suscipit nobis magnam aspernatur? Ipsum saepe aliquam nostrum? Non amet in molestias sunt cumque.</p>
+            </article>
+        </section>
+
+    </main>
+    <script>
+        const student ={name:'waerkil ruiyta' ,age:122, height:674};
+        console.log(document.body);
+        const blogTitles = document.getElementsByTagName('h3');
+        for( const h3 of blogTitles) {
+            console.log(h3.innerText);
+        }
+        const blogDetails = document.getElementsByTagName('p');
+        for(const p of blogDetails) {
+            console.log(p.innerText)
+        }
+        const firstTitle = document.getElementById('first-title') 
+        firstTitle.style.textAlign = 'center'
+        const secondTitle = document.getElementById('second-title') 
+        secondTitle.style.textAlign = 'center'
+        const thirdTitle = document.getElementById('third-title') 
+        thirdTitle.style.textAlign = 'center'
+        thirdTitle.innerText = 'bujhcchi js er karma';
+        thirdTitle.style.background = '#FBF8F1';
+        thirdTitle.style.padding = '10px';
+       
+        // create an add element by using js //
+        // create an element //
+        const li = document.createElement('li');
+        li.innerText = 'Blog-4'
+        // where to addv //
+        const ul = document.getElementById('blog-list')
+        // append new element 
+        ul.appendChild(li) ;  
+        // add an article by js //
+        const article = document.createElement('article');
+        article.classList.add('blog');
+        /* const h3 = document.createElement('h3');
+        h3.innerText = 'my awesome blog - 4'
+        const p = document.createElement('p');
+        p.innerText = 'quaerat maxime accusantium explicabo suscipit nobis magnam aspernatur? Ipsum saepe aliquam nostrum? Non amet in molestias sunt cumque'
+        article.appendChild(h3);
+        article.appendChild(p); */
+
+        // carret knowing //
+        article.innerHTML = `
+          <h3> my awesome vlog-4</h3>
+          h3.style.textAlign ='center' how to do it nigga????
+          <p> quaerat maxime accusantium explicabo suscipit nobis magnam aspernatur? Ipsum saepe aliquam nostrum? Non amet in molestias sunt cumque </p>
+        `
+
+        // find the parent of article //
+        const blogSection = document.getElementById('blogs');
+        blogSection.appendChild(article);
+
+
+        // explore get element by class names //
+        const blogs = document.getElementsByClassName('blog');
+        for(const blog of blogs) {
+            blog.style.border = '2px solid gold';
+            blog.style.margin = '5px';
+            blog.style.padding = '5px';
+            blog.style.borderRadius = '10px';
+        }
+        
+       </script>
+</body>
+</html>
